@@ -4,8 +4,22 @@ class SurveyController < ApplicationController
     
   end
   
-   def show
-    
+  def new
+    @survey = Survey.new
+  end
+  
+  def create
+    @survey = Survey.new(params[:survey])
+    if(@survey.save)
+      redirect_to(:action =>'list')
+    else
+      render('new')
+    end 
+  end
+  
+  
+  def show
+    @survey = Survey.find(params[:id])
   end
   
   
@@ -24,6 +38,8 @@ class SurveyController < ApplicationController
   def delete
     
   end
+  
+  
   
   def destroy
     

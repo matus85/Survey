@@ -1,0 +1,28 @@
+<script>
+	
+</script>
+
+<%= link_to("Back to List", {:action =>'list'}, :class=>'back-link')%>
+ 
+ 
+ <div class="theater new">
+ 	<%= form_for(@survey, :url => {:action => 'create'}) do |f|%>
+	<table summary="Survey form fields">
+		<tr>
+			<th>Survey Name</th>
+			<td><%= f.text_field(:title)%></td>
+			
+		</tr>
+	</table>
+	<div class="form-buttons">
+		<%= submit_tag("Create Survey")%>
+	</div>
+	<%end%>
+	
+	
+	
+	
+	
+	
+	
+	</div>
