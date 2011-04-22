@@ -1,4 +1,14 @@
-
+<script>
+  $(document).ready(function(){
+  	
+ 
+  
+  });
+  
+   
+ 
+	
+</script>
 <div class="Survey list">
 <h2>Survey (sorted by title)</h2>
 
@@ -15,7 +25,7 @@
 <% @surveys.each do |t| %>
 <tr>
 	<td><%=t.id %></td>
-	<td><%= t.title %></td>
+	<td ><%= t.title %></td>
 	
 	<td class="actions" >
 		<%= link_to("Show", {:action =>'show', :id => t.id}, :class => 'action show')%>
