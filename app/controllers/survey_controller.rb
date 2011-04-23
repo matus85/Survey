@@ -9,6 +9,12 @@ class SurveyController < ApplicationController
   end
   
   def create
+    puts "survey parameters"
+    @all =  params[:survey]
+ #  puts params[:result]
+    
+#       redirect_to(:action =>'new')
+    
     @survey = Survey.new(params[:survey])
     if(@survey.save)
       redirect_to(:action =>'list')

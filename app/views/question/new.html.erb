@@ -5,8 +5,8 @@
 <%= link_to("Back to List", {:action =>'list'}, :class=>'back-link')%>
  
  
- <div class="theater new">
- 	<%= form_for(@question, :url => {:action => 'create'}) do |f|%>
+ <div id="QuestionNew">
+ 	<%= form_for(@question, :url => {:controller => 'question', :action => 'create'}) do |f|%>
 	<table summary="Question form fields">
 		<tr>
 			<th>Question Name</th>
