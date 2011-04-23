@@ -20,4 +20,8 @@ class QuestionController < ApplicationController
     @questions = Question.all
     
   end
+  
+  def edit
+     @question = Question.find(params[:id])
+  end
 end
