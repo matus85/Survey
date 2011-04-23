@@ -1,8 +1,10 @@
 <script>
+	var qu=0
 	function addQuestion(){
-		
+		qu=qu+1;
 		$.ajax({
   			url: 'questionAdd',
+			data: 'q='+qu,
   			success: function(html){
     		$("#add").append(html);
   }

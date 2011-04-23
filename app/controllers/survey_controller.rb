@@ -11,16 +11,37 @@ class SurveyController < ApplicationController
   def create
     puts "survey parameters"
     @all =  params[:survey]
- #  puts params[:result]
-    
-#       redirect_to(:action =>'new')
-    
+    q =  params[:question]
+    s = q.size
+ 
+   
     @survey = Survey.new(params[:survey])
     if(@survey.save)
+     for a, in 1..s
+       
+      question = Question.create(:title => q['title('+a.to_s+'i)'])
+      @survey.questions << question
+      
+      end
+    
       redirect_to(:action =>'list')
     else
       render('new')
     end 
+   
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+#       redirect_to(:action =>'new')
+    
+  
   end
   
   
