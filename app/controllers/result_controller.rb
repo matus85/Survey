@@ -26,6 +26,11 @@ class ResultController < ApplicationController
   end
   
   
+  
+  def result
+       @surveys = Survey.order("title ASC")
+  end
+  
   def viewResult
     
   if  Survey.exists?(params[:id])
