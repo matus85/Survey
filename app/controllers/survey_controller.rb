@@ -53,6 +53,7 @@ class SurveyController < ApplicationController
   
   def edit
     @survey = Survey.find(params[:id])
+    @survey.update_attributes(params[:survey]) # performs actual update
   end
   
   def update
@@ -60,7 +61,11 @@ class SurveyController < ApplicationController
   end
   
   def delete
+    @survey = Survey.find(params[:id])
     
+    @survey.destroy
+    
+    redirect_to( :action => 'list')
   end
   
   

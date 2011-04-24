@@ -27,6 +27,20 @@ class QuestionController < ApplicationController
   end
   
   def edit
-     @question = Question.find(params[:id])
+  	session[:return_to] ||= request.referer # save url called from
+    @question = Question.find(params[:id])
+    
+    @question.update_attributes(params[:question]) 
+
+    
   end
+  
+  def delete
+  	@question = Question.find(params[:id])
+  	retID = @question.survey_id
+  	@question.destroy
+  	
+  	redirect_to(:controller => 'survey', :action =>'show', :id => retID)
+  end
+  
 end

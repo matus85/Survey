@@ -2,7 +2,12 @@
  
  
  <div class="Survey new">
- 	<%= form_for(:survey, :url => {:action => 'update', :id => @survey.id}) do |f|%>
+ 	
+ 	<!-- Hey Mike I got rid of this parameter in the form_for call :
+ 		:url => {:action => 'update', :id => @survey.id}
+ 		
+ 		Instead I added the paramter @survey -->
+ 	<%= form_for(:survey, @survey) do |f|%>
 	<table summary="Survey form fields">
 		<tr>
 			<th>Survey Title</th>

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <title>Edit A Question </title>
+	  <%= javascript_include_tag :defaults %>
+	  <%= yield :head %>
+  </head>
+  <body>
+  <%= yield %>
+  <h1> Edit Question </h1>
+  <%= form_for :question, @question  do |question_form| %>
+  <%= question_form.label :title, "Question"%>
+  <%= question_form.text_field :title %>
+  <%= question_form.submit 'Save Changes'%>
+<% end %>
+<%= link_to( 'Back', :controller => 'survey', :action =>'show', :id => @question.survey_id  )%>
+  </body>
+  
+  </body>
+</html>
