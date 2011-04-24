@@ -12,12 +12,12 @@
 
 
 
-	<h4><%=link_to("Create New Survey", {:action =>'new'})%></h4>
+	<h4><%=link_to("Add a Question", {:controller=>'question', :action =>'new', :id => @survey.id})%></h4>
 
 <table class="listing" summary="Questions List">
  <tr class="header">
   <th>ID</th>
-  <th>Title</th>
+  <th>Questions</th>
   <th>Action</th>
 </tr>
 <% @survey.questions.each do |t| %>

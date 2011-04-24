@@ -6,7 +6,7 @@
  
  
  <div id="QuestionNew">
- 	<%= form_for(@question, :url => {:controller => 'question', :action => 'create'}) do |f|%>
+ 	<%= form_for(@question, :url => {:controller => 'question', :action => 'create', :id => @survey.id}) do |f|%>
 	<table summary="Question form fields">
 		<tr>
 			<th>Question Name</th>
