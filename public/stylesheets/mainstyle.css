@@ -75,8 +75,7 @@ a {
 	text-decoration:none;
 }
 a:hover {
-	color: #069 ;
-	text-decoration:underline;
+	
 }
 a:visited 
 {
@@ -181,4 +180,17 @@ li {
 	background: #fff;
 	padding: 6px 6px 6px 12px;
 	color: #6D929B;
+}
+
+
+
+
+.nav li{
+	display:block;
+}
+a{
+	display:block;
+}
+.nav li:hover{
+	background-color:yellow;
 }
