@@ -27,12 +27,10 @@ body
 
 p.aboutplacement {
  padding: 10px;
- float: center ;
- background: #66FF99 ;
- width: 60% ; 
- position:absolute;
- left:450px;
- top:50px;
+ background: #3399FF;
+ position: relative ;
+ width: 40% ; 
+ left: 6% ;
 }
 
 #wrapper { 

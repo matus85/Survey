@@ -118,5 +118,8 @@
 	
  </div>
  
-<div class="center" id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div> 
+ <center>
+<div  id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div> 
+
+</center>
 

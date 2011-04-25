@@ -1,5 +1,11 @@
  
- 
+ <script>
+  $(document).ready(function(){
+  
+  });
+	
+</script>
+
  <div class="Survey new">
  	
  	<!-- Hey Mike I got rid of this parameter in the form_for call :
@@ -15,15 +21,38 @@
 		 
 	</table>
 	<div class="form-buttons">
-		<%= submit_tag("Edit Survey")%>
+		<%= submit_tag("Edit Survey Title")%>
 	</div>
 	<%end%>
 	
-<%= link_to("Back to List", {:action =>'list'}, :class=>'back-link')%>
+	<!-- code for editing questions within the edit page -->
+	<br>
+<table class="center listing" summary="Questions List">
+ <tr class="header">
+  <th>ID</th>
+  <th>Questions</th>
+  <th>Action</th>
+</tr>
+<% @survey.questions.each do |t| %>
+<tr>
+	<td><%=t.id %></td>
+	<td ><%= t.title %></td>
 	
+	<td class="actions" >
+		<%= link_to("Edit",  {:controller => 'question', :action =>'edit', :id => t.id}, :class => 'action edit')   %>
+		<%= link_to("Delete", {:controller => 'question', :action =>'delete', :id => t.id}, :class => 'action delete')  %>
+	</td>
+ 
 	
-	
-	
-	
-	
+	 
+</tr>
+
+<% end %>
+
+
+</table>
+</div>
+
+<br>
+<h4><%=link_to("Add a Question", {:controller=>'question', :action =>'new', :id => @survey.id}, :class => "new_box")%></h4>
 	</div>
