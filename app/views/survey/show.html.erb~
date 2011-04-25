@@ -1,5 +1,5 @@
 <div class="Survey list">
-<h2>Questions (sorted by title)</h2>
+		<h2><%= @survey.title %></h2>
 
 
 
