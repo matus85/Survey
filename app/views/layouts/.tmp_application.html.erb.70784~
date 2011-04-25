@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SurveyEngine</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+  <link rel="stylesheet" type="text/css" href="mainstyle.css" />
+</head>
+<body>
+	
+	<!-- navigation box stuff layed out by Armando -->
+	<div id="new_box nav_box" >
+		<ul>
+				<li> <%= link_to "Home", '/' %> </li>
+			<li> <%= link_to "Back", :back %> </li>
+<<<<<<< HEAD:app/views/layouts/.tmp_application.html.erb.70784~
+			<li> <%= link_to "About", '#' %> </li>
+			<li> <%= link_to "Help", '#' %> </li>
+=======
+			<li> <%= link_to "About", { :controller => 'survey', :action => 'about' } %> </li>
+			<li> <%= link_to "Help", { :controller => 'survey', :action => 'help' } %> </li>
+>>>>>>> 1beddaa0fcb10821b270cac71da8e79fdcb00c72:app/views/layouts/application.html.erb~
+		</ul>
+	</div>
+	<!-- end of navigation box stuff -->
+	<center>
+<%= yield %>
+</center>
+</body>
+</html>

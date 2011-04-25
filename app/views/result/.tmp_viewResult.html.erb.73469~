@@ -33,8 +33,10 @@
     }
   </style>	
 	
-	  <script class="code" type="text/javascript">$(document).ready(function(){
-        var s1 = [2, 3, 4, 2];
+	  <script class="code" type="text/javascript">
+	  	
+	function showGraph(pt){
+        var s1 = pt;
         var s2 = [7, 5, 3, 2];
         var ticks = ['a','b'];
         
@@ -62,7 +64,9 @@
                 $('#info2').html('Nothing');
             }
         );
-    });</script> 
+    };
+	
+	</script> 
 
 
 
@@ -77,7 +81,7 @@
 	<h2>Survey Results (<%= @survey.title%>)</h2>
 	
 	
-	<table class="center" id="result">
+	<table id="result">
 		<tr>
 			<th>ID</th>
 			<th>Question</th>
@@ -87,39 +91,44 @@
 			<th>Median</th>
 			
 		</tr>
-		
+		<% point ="["%>
 		<% @survey.questions.each do |q|%>
 		
 		<tr>
 			<td><%= q.id%></td>
 			<td><%= q.title %></td>
 		 
-				<%total =0%>
+				<% total =0%>
 				<% resultString=""%>
 				<% numberOfAnswers =0%>
 				<% q.results.each do |r|%>
-				<%total = total + r.answer.to_i%>
-				<% resultString = "#{resultString} #{r.answer.to_s}"%>
-				<% numberOfAnswers = numberOfAnswers+1%>
+					<% total = total + r.answer.to_i%>
+					<% resultString = "#{resultString} #{r.answer.to_s}"%>
+					<% numberOfAnswers = numberOfAnswers+1%>
 				<%end%>
+			
 			<td><%=resultString%></td>
 			<th><%=total%></th>
 			<th><%=total/q.results.size%></th>
-			
+			<% point = "#{point},#{total/q.results.size}" %>
 		</tr>
+
 		
-		<%  if numberOfAnswers > 1 %>
-				 
-				<%end%>
+
+
 		<%end%>
+
+	
+	
+		<tr>
+			<td></td>
+			<td><input type="button" onclick="showGraph(<%=point%>]);" value="Show Graph"></td>
+		</tr>
 	</table>
 	
 	
 	
  </div>
  
- <center>
-<div  id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div> 
-
-</center>
+<div id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div> 
 
