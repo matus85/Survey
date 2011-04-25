@@ -1,4 +1,5 @@
- 
+<<<<<<< HEAD
+
 <div class="Survey list">
 <h2><%= @survey.title%>  </h2>
  
@@ -58,4 +59,8 @@
 
 
  
- 
+
+
+=======
+<h1> Insert code to Take A Survey Here </h1> 
+>>>>>>> f5df7af29642d03cb4fb13aba4413725da83b64d

@@ -6,7 +6,7 @@
  		:url => {:action => 'update', :id => @survey.id}
  		
  		Instead I added the paramter @survey -->
-		<%= form_for(:survey, @survey, :url => {:action => 'update', :id => @survey.id}) do |f|%>
+		<%= form_for(:survey, @survey, :url => {:action => 'update', :id => @question.id}) do |f|%>
 	<table summary="Survey form fields" class="center" >
 		<tr>
 			<th>Survey Title</th>

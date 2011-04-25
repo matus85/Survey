@@ -1,13 +1,8 @@
 
- 
-<div class="Survey list">
-<h2>Surveys  </h2>
- 
+<div class="Survey_list">
+<h2>Take A Survey  </h2>
 
- 
- 
 <table class="center" class="listing" summary="Movie List">
- 
  <tr class="header">
   <th>ID</th>
   <th>Title</th>
@@ -19,9 +14,7 @@
 	<td ><%= t.title %></td>
 	
 	<td class="actions" >
- 
-		<%= link_to("Take", {:action =>'takeSurvey', :id => t.id}, :class => 'action takeSurvey')%>
- 
+		<%= link_to("Take", {:action =>'takeSurvey', :id => t.id}, :class => 'action show')%>
 	</td>
  
 	
@@ -33,7 +26,5 @@
 
 </table>
 </div>
- 
 
 <br>
- 

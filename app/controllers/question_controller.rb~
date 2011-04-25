@@ -45,12 +45,6 @@ class QuestionController < ApplicationController
   end
 
   def update
-	@question = Question.find( params[:id] )
-	if @question.update_attributes( params[:question ] )
-		redirect_to( session[:return_to ] ) 
-	else
-		render( :action => 'edit' )
-	end
   end
   
 end
