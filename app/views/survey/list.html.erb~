@@ -33,4 +33,5 @@
 </div>
 
 <br>
+<br>
 <h4><%=link_to("Create New Survey", {:action =>'new'}, :class => "new_box")%></h4>
