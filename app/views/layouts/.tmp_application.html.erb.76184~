@@ -10,10 +10,7 @@
 <body>
 	
 	<!-- navigation box stuff layed out by Armando -->
-	<div >
-		<img align="left" src="/images/survey.jpg" alt="img" style="z-index=-1; position:relative;" />
-		</div>
-	<div class="new_box nav_box">
+	<div class="new_box nav_box" >
 		<ul>
 				<li> <%= link_to "Home", '/' %> </li>
 			<li> <%= link_to "Back", :back %> </li>

@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 /* code for all headings */
 }
 body 
 {
- background-image: url("/images/survey.jpg");
+ /* background-image: url("/images/survey.jpg"); */
  background-repeat: no-repeat;
  text-align:center;
  background-color:#d0e4fe; 
@@ -85,8 +85,8 @@ a:visited
 
 a.new_box  /* code for adding stuff box */
 {
-	margin-left: auto ;
-	margin-right: auto ;
+
+	
 	display: block ;
 	text-align: center ;
 	width: 190px ;
@@ -105,6 +105,11 @@ a.new_box  /* code for adding stuff box */
  height: 25px;
  color: #333;
  background: #6699FF;
+ 
+ 
+  position:absolute;
+	 left:auto;
+	 z-index:2; 
 }
 .nav_box:hover { 
  background-color: red;

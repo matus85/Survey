@@ -12,7 +12,11 @@
   <th>3</th>
   <th>4</th>
   <th>5</th>
-
+  <th>6</th>
+  <th>7</th>
+  <th>8</th>
+  <th>9</th>
+  <th>10</th>
   
    
 </tr>
@@ -29,7 +33,11 @@
 	<td><%= radio_button_tag('answer['+t.id.to_s+']', 3)%></td>
 	<td><%= radio_button_tag('answer['+t.id.to_s+']', 4)%></td>
 	<td><%= radio_button_tag('answer['+t.id.to_s+']', 5)%></td>
-
+	<td><%= radio_button_tag('answer['+t.id.to_s+']', 6)%></td>
+	<td><%= radio_button_tag('answer['+t.id.to_s+']', 7)%></td>	
+	<td><%= radio_button_tag('answer['+t.id.to_s+']', 8)%></td>	
+	<td><%= radio_button_tag('answer['+t.id.to_s+']', 9)%></td>	
+	<td><%= radio_button_tag('answer['+t.id.to_s+']', 10)%></td>	
 	 
 	 
 </tr>
