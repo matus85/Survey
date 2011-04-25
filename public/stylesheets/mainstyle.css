@@ -17,15 +17,22 @@ h1, h2, h3, h4, h5, h6 /* code for all headings */
 }
 body 
 {
+ background-image: url("/images/survey.jpg");
+ background-repeat: no-repeat;
  text-align:center;
- /* background-color:#d0e4fe; */
- background-image:url('/public/images/30039en9gpmn560.jpg');
+ background-color:#d0e4fe; 
  /* font-family: Verdana, Arial, Helvetica, sans-serif;*/
  font-size: 20px;
 }
 
-p {
+p.aboutplacement {
  padding: 10px;
+ float: center ;
+ background: #66FF99 ;
+ width: 60% ; 
+ position:absolute;
+ left:450px;
+ top:50px;
 }
 
 #wrapper { 
@@ -119,6 +126,13 @@ th {
   {
 	margin-left:auto;
 	margin-right:auto;
+  }
+
+  .centerchart
+  {
+	margin-left:auto;
+	margin-right:auto;
+
   }
 
 td {

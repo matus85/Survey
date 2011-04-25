@@ -79,6 +79,12 @@ class SurveyController < ApplicationController
   def destroy
     
   end
+
+  def about
+  end
+
+  def help
+  end
   
  
   

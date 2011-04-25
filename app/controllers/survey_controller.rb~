@@ -60,7 +60,7 @@ class SurveyController < ApplicationController
   def update
 	@survey = Survey.find( params[:id] )
 	if @survey.update_attributes( params[:survey ] )
-		render( :action => 'list' ) 
+		redirect_to( :action => 'list' ) 
 	else
 		render( :action => 'edit' )
 	end
@@ -78,6 +78,9 @@ class SurveyController < ApplicationController
   
   def destroy
     
+  end
+
+  def about
   end
   
  
