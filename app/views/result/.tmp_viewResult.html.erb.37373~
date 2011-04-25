@@ -1,0 +1,122 @@
+<%= stylesheet_link_tag("jquery.jqplot")%>
+<%= javascript_include_tag ('jquery.jqplot', 'jqplot.barRenderer', 'jqplot.categoryAxisRenderer.js', 'jqplot.highlighter','jqplot.pointLabels','jqplot.pieRenderer') %>
+<script>
+	
+	$(document).ready(function(){
+		
+		$.jqplot.config.enablePlugins = true;
+	});
+	</script>
+	
+<style type="text/css"> 
+    .jqplot-target {
+        margin-bottom: 2em;
+    }
+    
+    pre {
+        background: #D8F4DC;
+        border: 1px solid rgb(200, 200, 200);
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-bottom: 1em;
+        margin-top: 1em;
+        margin-bottom: 4em;
+        
+    }
+    
+    p {
+        margin: 2em 0;
+    }
+    
+    .note {
+        font-size: 0.8em;
+    }
+  </style>	
+	
+	  <script class="code" type="text/javascript">$(document).ready(function(){
+        var s1 = [2, 3, 4, 2];
+        var s2 = [7, 5, 3, 2];
+        var ticks = ['a','b'];
+        
+        plot2 = $.jqplot('chart2', [s1], {
+            seriesDefaults: {
+                renderer:$.jqplot.BarRenderer,
+                pointLabels: { show: true }
+            },
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.CategoryAxisRenderer,
+                    ticks: ticks
+                }
+            }
+        });
+    
+        $('#chart2').bind('jqplotDataHighlight', 
+            function (ev, seriesIndex, pointIndex, data) {
+                $('#info2').html('series: '+seriesIndex+', point: '+pointIndex+', data: '+data);
+            }
+        );
+            
+        $('#chart2').bind('jqplotDataUnhighlight', 
+            function (ev) {
+                $('#info2').html('Nothing');
+            }
+        );
+    });</script> 
+
+
+
+
+
+
+
+
+
+ <div >
+ 	
+	<h2>Survey Results (<%= @survey.title%>)</h2>
+	
+	
+	<table id="result">
+		<tr>
+			<th>ID</th>
+			<th>Question</th>
+			<th>Result</th>
+		  
+			<th>Total</th>
+			<th>Median</th>
+			
+		</tr>
+		
+		<% @survey.questions.each do |q|%>
+		
+		<tr>
+			<td><%= q.id%></td>
+			<td><%= q.title %></td>
+		 
+				<%total =0%>
+				<% resultString=""%>
+				<% numberOfAnswers =0%>
+				<% q.results.each do |r|%>
+				<%total = total + r.answer.to_i%>
+				<% resultString = "#{resultString} #{r.answer.to_s}"%>
+				<% numberOfAnswers = numberOfAnswers+1%>
+				<%end%>
+			<td><%=resultString%></td>
+			<th><%=total%></th>
+			<th><%=total/q.results.size%></th>
+			
+		</tr>
+		
+		<%  if numberOfAnswers > 1 %>
+				 
+				<%end%>
+		<%end%>
+	</table>
+	
+	
+	
+ </div>
+ 
+<div id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div> 
+

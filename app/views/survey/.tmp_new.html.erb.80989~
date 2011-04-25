@@ -1,5 +1,5 @@
 <script>
-	var qu=0
+	var qu=1
 	function addQuestion(){
 		qu=qu+1;
 		$.ajax({
@@ -25,7 +25,16 @@
 		</tr>
 		<tr><td></td><td><input type="button" onclick="addQuestion();" value="Add Question"></td></tr>
 	</table>
-	<div id="add"></div>
+	<div id="add">
+		<table>		
+		 <tr>
+			<th>Question</th>
+			<td><input type="text" id="question_title" name="question[title(1i)]" size="30"></td>
+		 		
+	 	</tr>
+		</table>
+
+	</div>
 	<div class="form-buttons">
 		<%= submit_tag("Create Survey")%>
 	</div>
