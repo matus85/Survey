@@ -33,6 +33,7 @@ li {
 
 	position: relative ;
 	left: 200 px ;
+	display: none ; 
 }
 
 

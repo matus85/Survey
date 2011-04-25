@@ -33,6 +33,18 @@ p.aboutplacement {
  left: 6% ;
 }
 
+table.place {
+ padding: 10px;
+ position: relative ;
+ width: 40% ; 
+ left: 10% ;
+}
+tr.place {
+ padding: 10px;
+ position: relative ;
+ width: 40% ; 
+ left: 80% ;
+}
 #wrapper { 
  margin: 0 auto;
  width: 70%;
@@ -93,6 +105,9 @@ a.new_box  /* code for adding stuff box */
  height: 25px;
  color: #333;
  background: #6699FF;
+}
+.nav_box:hover { 
+ background-color: red;
 }
 .round /* css for rounded box corners NOT WORKING YET  */
 {

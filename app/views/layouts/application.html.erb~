@@ -10,7 +10,7 @@
 <body>
 	
 	<!-- navigation box stuff layed out by Armando -->
-	<div class="new_box nav_box" >
+	<div id="new_box nav_box" >
 		<ul>
 				<li> <%= link_to "Home", '/' %> </li>
 			<li> <%= link_to "Back", :back %> </li>
@@ -19,8 +19,8 @@
 		</ul>
 	</div>
 	<!-- end of navigation box stuff -->
-
+	<center>
 <%= yield %>
-
+</center>
 </body>
 </html>
