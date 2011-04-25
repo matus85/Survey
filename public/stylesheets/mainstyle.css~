@@ -18,7 +18,8 @@ h1, h2, h3, h4, h5, h6 /* code for all headings */
 body 
 {
  text-align:center;
- background-color:#d0e4fe;
+ /* background-color:#d0e4fe; */
+ background-image:path('/public/images/30039en9gpmn560.jpg');
  /* font-family: Verdana, Arial, Helvetica, sans-serif;*/
  font-size: 20px;
 }
@@ -83,7 +84,7 @@ a.new_box  /* code for adding stuff box */
 
 .nav_box {
  float: left;
- width: 20%;
+ width: 10%;
  height: 25px;
  color: #333;
  background: #6699FF;
@@ -132,4 +133,20 @@ td {
 td.alt {
 	background: #F5FAFA;
 	color: #B4AA9D;
+}
+
+/* unordered list data */
+
+ul 
+{
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+li {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #6D929B;
 }
