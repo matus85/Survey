@@ -10,14 +10,19 @@
 <body>
 	
 	<!-- navigation box stuff layed out by Armando -->
-	<nav class="new_box nav_box" >
+	<div class="new_box nav_box" >
 		<ul>
 				<li> <%= link_to "Home", '/' %> </li>
 			<li> <%= link_to "Back", :back %> </li>
+<<<<<<< HEAD:app/views/layouts/.tmp_application.html.erb.70784~
 			<li> <%= link_to "About", '#' %> </li>
 			<li> <%= link_to "Help", '#' %> </li>
+=======
+			<li> <%= link_to "About", { :controller => 'survey', :action => 'about' } %> </li>
+			<li> <%= link_to "Help", { :controller => 'survey', :action => 'help' } %> </li>
+>>>>>>> 1beddaa0fcb10821b270cac71da8e79fdcb00c72:app/views/layouts/application.html.erb~
 		</ul>
-	</nav>
+	</div>
 	<!-- end of navigation box stuff -->
 
 <%= yield %>

@@ -1,11 +1,5 @@
-<script>
-  $(document).ready(function(){
-  
-  });
-	
-</script>
 <div class="Survey list">
-<h2>Questions (sorted by title)</h2>
+		<h2><%= @survey.title %></h2>
 
 
 
@@ -14,19 +8,11 @@
  <tr class="header">
   <th>ID</th>
   <th>Questions</th>
-  <th>Action</th>
 </tr>
 <% @survey.questions.each do |t| %>
 <tr>
 	<td><%=t.id %></td>
 	<td ><%= t.title %></td>
-	
-	<td class="actions" >
-		<%= link_to("Edit",  {:controller => 'question', :action =>'edit', :id => t.id}, :class => 'action edit')   %>
-		<%= link_to("Delete", {:controller => 'question', :action =>'delete', :id => t.id}, :class => 'action delete')  %>
-	</td>
- 
-	
 	 
 </tr>
 
@@ -35,4 +21,5 @@
 
 </table>
 </div>
-<h4><%=link_to("Add a Question", {:controller=>'question', :action =>'new', :id => @survey.id}, :class => "new_box")%></h4>
+
+<br>

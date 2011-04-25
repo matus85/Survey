@@ -101,7 +101,7 @@
 	
  </div>
  
- 
+<<<<<<< HEAD
  
  
 <script class="code" type="text/javascript">
@@ -149,11 +149,13 @@
 	</script> 
  
  
-
+ <center>
  
     <div id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div> 
 	
+	</center>
+=======
+<div  id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div> 
 
 
-
-
+>>>>>>> 1beddaa0fcb10821b270cac71da8e79fdcb00c72

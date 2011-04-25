@@ -21,7 +21,7 @@ class SurveyController < ApplicationController
        question = Question.create(:title => q['title('+a.to_s+'i)'])
        @survey.questions << question
      end
-     redirect_to(:action =>'list')
+     redirect_to(:action =>'show', :id => @survey.id )
     else
       render('new')
     end 
@@ -60,7 +60,7 @@ class SurveyController < ApplicationController
   def update
 	@survey = Survey.find( params[:id] )
 	if @survey.update_attributes( params[:survey ] )
-		redirect_to( :action => 'list' ) 
+		redirect_to( :action => 'edit' ) 
 	else
 		render( :action => 'edit' )
 	end
@@ -78,6 +78,12 @@ class SurveyController < ApplicationController
   
   def destroy
     
+  end
+
+  def about
+  end
+
+  def help
   end
   
  

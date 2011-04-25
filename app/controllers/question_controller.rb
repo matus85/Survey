@@ -15,7 +15,7 @@ class QuestionController < ApplicationController
     @survey.questions << @questions
     
     if(@questions.save)
-      redirect_to(:controller => 'survey', :action =>'show', :id => @survey.id)
+      redirect_to(:controller => 'survey', :action =>'edit', :id => @survey.id)
     else
       render('new')
     end 
@@ -41,7 +41,7 @@ class QuestionController < ApplicationController
   	retID = @question.survey_id
   	@question.destroy
   	
-  	redirect_to(:controller => 'survey', :action =>'show', :id => retID)
+  	redirect_to(:controller => 'survey', :action =>'edit', :id => retID)
   end
 
   def update
