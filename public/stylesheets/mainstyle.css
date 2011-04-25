@@ -9,6 +9,10 @@
 
 * { padding: 0; margin: 0; }
 
+.marginImg
+{
+  margin-right: 30% ;
+}
 h1, h2, h3, h4, h5, h6 /* code for all headings */
 {
 	font :bold 20px "Comic Sans MS", Arial, Helvetica, sans-serif;
@@ -26,6 +30,7 @@ body
 }
 
 p.aboutplacement {
+ margin-left: 450px ;
  padding: 10px;
  background: #3399FF;
  position: relative ;
@@ -141,8 +146,8 @@ th {
 
   table.center /* code to center a table */
   {
-	margin-left:auto;
-	margin-right:auto;
+	margin-left: 450px;
+	
   }
 
   .centerchart
