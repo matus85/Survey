@@ -1,0 +1,44 @@
+ <div>
+ 	
+	<h2>Survey Results (<%= @survey.title%>)</h2>
+	
+	
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Question</th>
+			<th>Result</th>
+		 
+			<% @survey.questions.each do |q|%>
+				<% q.results.each do |r|%>
+				<th></th>
+				<%end%>
+				<%break%>
+			<%end%>
+			<th>Total</th>
+			<th>Median</th>
+		</tr>
+		
+		<% @survey.questions.each do |q|%>
+		
+		<tr>
+			<td><%= q.id%></td>
+			<td><%= q.title %></td>
+			<td></td>
+			<%total =0%>
+			<% q.results.each do |r|%>
+			<%total = total + r.answer.to_i%>
+				<td><%=r.answer%></td>
+			<%end%>
+			<th><%=total%></th>
+			<th><%=total/q.results.size%></th>
+			
+		</tr>
+		
+		
+		<%end%>
+	</table>
+	
+	
+	
+ </div>
