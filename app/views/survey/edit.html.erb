@@ -15,19 +15,30 @@
 		<%= form_for(:survey, @survey, :url => {:action => 'update', :id => @survey.id}) do |f|%>
 	<table summary="Survey form fields" class="center" >
 		<tr>
+			
 			<th>Survey Title</th>
-			<td><%= f.text_field(:title)%></td>
+		</tr>
+		<tr>
+			<td ><%= f.text_field(:title)%></td>
+			
+		</tr>
+		<tr>
+			<td style="float: right ; background-color: #d0e4fe ;">
+			<div class="form-buttons">
+				<%= submit_tag("Edit Survey Title")%>
+			</div>
+			</td>
 		</tr>
 		 
-	</table>
-	<div class="form-buttons">
-		<%= submit_tag("Edit Survey Title")%>
-	</div>
+	<!-- ></table> -->
+
 	<%end%>
 	
 	<!-- code for editing questions within the edit page -->
-	<br>
-<table class="center listing" summary="Questions List">
+	<!-- ><br> -->
+	<tr>
+		<td>
+<table class="listing" summary="Questions List">
  <tr class="header">
   <th>ID</th>
   <th>Questions</th>
@@ -49,10 +60,19 @@
 
 <% end %>
 
-
-</table>
+	
+	</table>
+	</td>
+	</tr>
+		<tr>
+			<td style="background-color: #d0e4fe ;">
+				<center>
+				<h4><%=link_to("Add a Question", {:controller=>'question', :action =>'new', :id => @survey.id}, :class => "new_box")%></h4>
+				</center>
+			</td>
+		</tr>
+	</table>
 </div>
 
-<br>
-<h4><%=link_to("Add a Question", {:controller=>'question', :action =>'new', :id => @survey.id}, :class => "new_box")%></h4>
-	</div>
+
+	

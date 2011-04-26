@@ -42,10 +42,13 @@
 
  <div >
  	
-	<h2>Survey Results (<%= @survey.title%>)</h2>
+ 	<table class="center">
+ 		<tr>
+<th> <h2>Survey Results (<%= @survey.title%>)</h2> </th>
+	</tr>
 	
-	
-	<table class="center" id="result">
+	<tr> <td>
+	<table  id="result">
 		<tr>
 			<th>ID</th>
 			<th>Question</th>
@@ -95,6 +98,8 @@
 			<td></td>
 			<td><input type="button" onclick="showGraph();" value="Show Graph"></td>
 		</tr>
+	</table>
+	</td></tr>
 	</table>
 	
 	
