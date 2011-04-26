@@ -4,10 +4,11 @@
 <table class="center">
 <tr>
   <th ><h2  >Surveys </h2></th>
+</tr>
 <tr>
+<td>
 
-
-<table class="center" class="listing" summary="Movie List">
+<table  class="listing" summary="Movie List">
  <tr class="header">
   <th>ID</th>
   <th>Title</th>
@@ -35,8 +36,19 @@
 </td>
 </tr>
 
+
+<tr>
+  <td style="background-color: #d0e4fe ;">
+<center>
+    <h4><%=link_to("Create New Survey", {:action =>'new'}, :class => "new_box")%></h4>
+</center>
+  </td>
+
+</tr>
+
 </table>
 </div>
 
 <br>
-<h4><%=link_to("Create New Survey", {:action =>'new'}, :class => "new_box")%></h4>
+
+
