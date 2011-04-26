@@ -47,7 +47,9 @@ class QuestionController < ApplicationController
   def update
 	@question = Question.find( params[:id] )
 	if @question.update_attributes( params[:question ] )
-		redirect_to( session[:return_to ] ) 
+		puts "THIS IS WHERE I'M RETURNING TO : #{ session[:return_to]} "
+		redirect_to( :controller => 'survey', :action => 'edit', :id => @question.survey_id)
+		# redirect_to( session[:return_to ] ) 
 	else
 		render( :action => 'edit' )
 	end

@@ -2,7 +2,7 @@
 	
 </script>
 
-<%= link_to("Back to List", {:action =>'list'}, :class=>'back-link')%>
+<%= link_to("Back to List", {:controller => 'survey', :action =>'edit', :id => @survey.id})%>
  
  
  <div id="QuestionNew">

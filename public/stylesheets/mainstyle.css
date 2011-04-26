@@ -81,6 +81,9 @@ a {
 }
 a:hover {
 	
+	
+	text-decoration: underline ;
+	
 }
 a:visited 
 {
@@ -99,7 +102,7 @@ a.new_box  /* code for adding stuff box */
 	background: #993366 ;
 	font-size: 120% ;
 	font-weight: bold ;
-	padding: 20 px ;
+	padding: 20px ;
 	text-decoration:none ;
 	border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px;
 }
@@ -195,6 +198,8 @@ li {
 
 .nav li{
 	display:block;
+	min-width: 120px;
+	max-width: 120px;
 }
 a{
 	display:block;
