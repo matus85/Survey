@@ -8,50 +8,36 @@
 		$("#add").append("<tr>"+x+"</tr>");
 	};
 </script>
-
-<table class="center">
-	<tr><td style="background-color: #d0e4fe ; ">
-		<%= link_to("Back to List", {:action =>'list'}, :class=>'back-link')%>
-	</td><tr>
  
- 
- <tr><td>
  <div class="Survey new">
  	<%= form_for(@survey, :url => {:action => 'create'}) do |f|%>
-	<table summary="Survey form fields">
+	<table id="add" summary="Survey form fields">
 		<tr>
 			<th>Survey Name</th>
 			<td><%= f.text_field(:title)%></td>			
 		</tr>
 		
-	</table>
-	<tr><td style="background-color: #d0e4fe ; "><input type="button" onclick="addQuestion();" value="Add Question"></td></tr>
-	
-	<tr><td>
-	<div id="add">
-		<table >		
-		 <tr>
+		<tr>
+			<td style="background-color: #d0e4fe;"></td>
+		 
+			<td style="background-color: #d0e4fe;"><input type="button" onclick="addQuestion();" value="Add Question" /></td>
+		</tr>
+		
+		
+		<tr>
 			<th>Question</th>
-			<td><input type="text" id="question_title" name="question[title(1i)]" size="30"></td>
-		 		
-	 	</tr>
-		</table>
-
-	</div>
+			<td><input type="text" id="question_title" name="question[title(1i)]" size="30" /></td>
+		</tr>
+		
 	
-	</td> </tr>
-	<tr><td style="background-color: #d0e4fe ; ">
-	<div class="form-buttons">
-		<%= submit_tag("Create Survey")%>
-	</div>
-	</td></tr>
 	</table>
+	 <table>
+	 	<tr>
+	 		<td>
+	 			<%= submit_tag("Create Survey")%>
+	 		</td>
+	 	</tr>
+	 </table>
 	<%end%>
-	
-	
-	
-	
-	
-	
-	
-	</div>
+	 </div>
+	 
