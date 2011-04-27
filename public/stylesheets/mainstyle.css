@@ -190,12 +190,12 @@ ul
 }
 .mainPageList
 {
-	margin-left: 150px ;
+	margin-left: 600px ;
 }
 .mainPageList li 
 {
 	
-	margin-left: 450px ;
+	/*margin-left: 450px ;*/
 	min-width: 120px ;
 	max-width: 120px ;
 	display:block ;
