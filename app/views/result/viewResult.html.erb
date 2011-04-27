@@ -54,7 +54,7 @@
 			<th>Question</th>
 			<th>Result</th>
 		  
-			<th>Total</th>
+			<!-- <th>Total</th> -->
 			<th>Median</th>
 			
 		</tr>
@@ -82,7 +82,7 @@
 				<% resultString = resultString[1..-1]%>
 			
 			<td><%=resultString%></td>
-			<th><%=total%></th>
+			<!-- <th><%=total%></th> -->
 			<% average = 0 %>
 			<% average = total/q.results.size if q.results.size != 0 %>
 			<th id="average("<%=q.id%>)"><%=average%></th>
@@ -141,7 +141,7 @@
                     $.jqplot.CategoryAxisRenderer,
                     ticks: ticks
                 },
-                yaxis:{min:0, max:5}
+                yaxis:{min:0, max:6}
                 
             }
             

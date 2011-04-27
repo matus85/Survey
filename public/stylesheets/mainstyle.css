@@ -23,7 +23,7 @@ body
 {
  /* background-image: url("/images/survey.jpg"); */
  background-repeat: no-repeat;
- text-align:center;
+ /* text-align:center; */ 
  background-color:#d0e4fe; 
  /* font-family: Verdana, Arial, Helvetica, sans-serif;*/
  font-size: 20px;
@@ -82,7 +82,7 @@ a {
 a:hover {
 	
 	
-	text-decoration: underline ;
+	/* text-decoration: underline ; */
 	
 }
 a:visited 
@@ -153,6 +153,8 @@ th {
   table.center /* code to center a table */
   {
 	margin-left: 450px;
+	min-width: 450px ;
+	max-width: 450px ;
   }
 
   .centerchart
@@ -184,7 +186,25 @@ ul
 	
 	margin-left:auto;
 	margin-right:auto;
+	
 }
+.mainPageList
+{
+	margin-left: 150px ;
+}
+.mainPageList li 
+{
+	
+	margin-left: 450px ;
+	min-width: 120px ;
+	max-width: 120px ;
+	display:block ;
+}
+li.mainPageHover:hover 
+{ 
+ background-color: yellow;
+}
+
 li {
 	border-right: 1px solid #C1DAD7;
 	border-bottom: 1px solid #C1DAD7;
@@ -206,4 +226,9 @@ a{
 }
 .nav li:hover{
 	background-color:yellow;
+}
+
+table.fixedWidth
+{
+	width: 400px ;
 }

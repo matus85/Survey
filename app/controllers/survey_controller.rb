@@ -1,6 +1,6 @@
 class SurveyController < ApplicationController
   def index
-    redirect_to(:action =>'list')
+    # redirect_to(:action =>'list')
     
   end
   

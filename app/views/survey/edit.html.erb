@@ -13,7 +13,7 @@
  		
  		Instead I added the paramter @survey -->
 		<%= form_for(:survey, @survey, :url => {:action => 'update', :id => @survey.id}) do |f|%>
-	<table summary="Survey form fields" class="center" >
+	<table summary="Survey form fields" class="center fixedWidth" >
 		<tr>
 			
 			<th>Survey Title</th>
@@ -38,7 +38,7 @@
 	<!-- ><br> -->
 	<tr>
 		<td>
-<table class="listing" summary="Questions List">
+<table  summary="Questions List">
  <tr class="header">
   <th>ID</th>
   <th>Questions</th>
