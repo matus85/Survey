@@ -16,6 +16,8 @@ class SurveyController < ApplicationController
     @survey = Survey.new(params[:survey])
     if(@survey.save)
      q =  params[:question]
+     
+     puts "questions size: #{q.size}"
      s = q.size
      for a, in 1..s
        question = Question.create(:title => q['title('+a.to_s+'i)'])
