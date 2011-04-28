@@ -231,8 +231,17 @@ li {
 
 .nav li{
 	display:block;
-	width:120px;
+	width:140px;
 	text-align:center;
+	padding:0;
+	margin:0;
+	height:2em;
+}
+.nav a { 
+	
+	padding:5px;  
+	display:block;
+
 }
 a{
 	display:block;
