@@ -7,12 +7,9 @@
 			<th>Question Title</th>
 			<td><%= f.text_field(:title)%></td>
 		</tr>
-		 
+		 <tr><td style="background-color: #d0e4fe; border:none;"></td><td style="background-color: #d0e4fe; text-align:right; border:none;"><%= submit_tag("Edit Question")%></td></tr>
 	</table>
-	<div class="form-buttons">
-		<%= submit_tag("Edit Question")%>
-	</div>
+ 
 	<%end%>
-	<%= link_to("Back to List", session[ :return_to ] )%>
-	
+	 
 	</div>

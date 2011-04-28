@@ -44,7 +44,7 @@
  	
  	<table class="center">
  		<tr>
-<th> <h2>Survey Results (<%= @survey.title%>)</h2> </th>
+<th style="border:none;"> <h2>Survey Results (<%= @survey.title%>)</h2> </th>
 	</tr>
 	
 	<tr> <td>
@@ -52,7 +52,7 @@
 		<tr>
 			<th>ID</th>
 			<th>Question</th>
-			<th>Result</th>
+			<th>Results</th>
 		  
 			<!-- <th>Total</th> -->
 			<th>Median</th>
@@ -101,10 +101,7 @@
 		
 	</table>
 	</td></tr>
-		<tr >
-			<!-- ><td></td> -->
-			<td style="background-color: #d0e4fe ;"><input type="button" onclick="showGraph();" value="Show Graph"></td>
-		</tr>
+		 
 	</table>
 	
 	
@@ -116,11 +113,12 @@
  
 <script class="code" type="text/javascript">
 	  	
-		function showGraph(){
+		$(document).ready(function(){
+			
           var pts = "<%=point%>"
           var s1 =   pts.split(",");
 		  
-		     alert(s1);
+		     
 		  
 		  var x = "<%=col%>";
 		 
@@ -159,14 +157,14 @@
             }
         );
     
-	}
+			});
 	</script> 
  
  
 
  
  <center>
-    <div id="chart2" style="margin-top:20px; margin-left:20px; width:300px; height:300px;"></div>
+    <div id="chart2" style="margin-top:20px; margin-left:20px; width:450px; height:300px;"></div>
     </center> 
 	
 

@@ -1,15 +1,13 @@
 <div class="Survey list">
-		
+		<div class="title">
+			<h2><%= @survey.title %></h2>
+		</div>
 <table class="center">
 <tr>
 <th>
-<h2><%= @survey.title %></h2>
+
 </th>
 </tr>
-
-
-
-
 
 <tr> <td>
 <table class="fixedWidth" summary="Questions List">
@@ -17,9 +15,10 @@
   <th>ID</th>
   <th>Questions</th>
 </tr>
+<%num=0%>
 <% @survey.questions.each do |t| %>
 <tr>
-	<td><%=t.id %></td>
+	<td style="width:10px;"><%=num = num+1 %></td>
 	<td ><%= t.title %></td>
 	 
 </tr>
