@@ -1,11 +1,13 @@
+############################################################################
 PROJECT: Survey Engine
 
-PROGRAMMERS:	Mike Matusevich and Armando Diaz
+PROGRAMMERS:	Michael Matusevich  676811045
+				Armando Diaz		652818486
 
 COURSE:			CS441 Spring 2011
 
 DATE: 4/27/2011
-
+############################################################################
 
 NOTES: 
 	* This project was built using rails version 3.0.0 and Ruby 1.8.7. For best results, 
