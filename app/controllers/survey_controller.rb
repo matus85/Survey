@@ -54,18 +54,18 @@ class SurveyController < ApplicationController
   end
   
   def edit
-  	session[:return_to] ||= request.referer # save url called from
+  	session[:return_to] ||= request.referer  
     @survey = Survey.find(params[:id])
     @survey.update_attributes(params[:survey]) # performs actual update
   end
   
   def update
-	@survey = Survey.find( params[:id] )
-	if @survey.update_attributes( params[:survey ] )
-		redirect_to( :action => 'edit' ) 
-	else
-		render( :action => 'edit' )
-	end
+  	@survey = Survey.find( params[:id] )
+  	if @survey.update_attributes( params[:survey ] )
+  		redirect_to( :action => 'edit', :id => params[:id] ) 
+  	else
+  		render( :action => 'edit' )
+  	end
   end
   
   def delete

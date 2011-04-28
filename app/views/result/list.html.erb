@@ -2,7 +2,7 @@
  
 <div class="Survey list">
 	<table class="center">
-		<tr> <th>
+		<tr> <th style="border:none;">
 			<h2>Surveys  </h2>
 		</th> </tr>
 
@@ -16,17 +16,19 @@
   <th>Title</th>
   <th>Action</th>
 </tr>
+<% num=0%>
 <% @surveys.each do |t| %>
 <tr>
-	<td><%=t.id %></td>
+	<td><%=num = num+1 %></td>
 	<td ><%= t.title %></td>
 	
-	<td class="actions" >
- 
-		<%= link_to("Take", {:action =>'takeSurvey', :id => t.id}, :class => 'action takeSurvey')%>
- 
+		<td class="center">
+		<center>
+		<table class="hover" class="center">
+		<tr><td ><%= link_to("Take", {:action =>'takeSurvey', :id => t.id}, :class => 'action takeSurvey')%></td></tr>
+	</table>
+		</center>
 	</td>
- 
 	
 	 
 </tr>

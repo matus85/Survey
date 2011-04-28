@@ -15,18 +15,21 @@
 }
 h1, h2, h3, h4, h5, h6 /* code for all headings */
 {
-	font :bold 20px "Comic Sans MS", Arial, Helvetica, sans-serif;
+	font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
 	color:#0033CC ;
 
 }
+
+ 
+
 body 
 {
- /* background-image: url("/images/survey.jpg"); */
+ 
  background-repeat: no-repeat;
- /* text-align:center; */ 
+  
  background-color:#d0e4fe; 
- /* font-family: Verdana, Arial, Helvetica, sans-serif;*/
- font-size: 20px;
+ 
+ 
 }
 
 p.aboutplacement {
@@ -93,11 +96,8 @@ a:visited
 a.new_box  /* code for adding stuff box */
 {
 
-	
 	display: block ;
-	
 	text-align: center ;
-	
 	color: #3399FF ;
 	background: #993366 ;
 	font-size: 120% ;
@@ -108,19 +108,18 @@ a.new_box  /* code for adding stuff box */
 }
 
 .nav_box {
- float: left;
- width: 10%;
- height: 25px;
- color: #333;
- background: #6699FF;
- 
- 
-  position:absolute;
-	 left:auto;
-	 z-index:2; 
+	float: left;
+	width: 10%;
+	height: 25px;
+	color: #333;
+	background: #6699FF;
+	
+	position:absolute;
+	left:auto;
+	z-index:2; 
 }
 .nav_box:hover { 
- background-color: red;
+ 	background-color: red;
 }
 .round /* css for rounded box corners NOT WORKING YET  */
 {
@@ -128,11 +127,14 @@ a.new_box  /* code for adding stuff box */
 	-webkit-border-radius: 10px ;
 	border-radius: 10px ;
 }
-
+.center {
+	text-align:center;
+}
 /* table header code */
 th {
-	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica,
-	sans-serif;
+	 
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	
 	color: #6D929B;
 	border-right: 1px solid #C1DAD7;
 	border-bottom: 1px solid #C1DAD7;
@@ -141,7 +143,7 @@ th {
 	
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	text-align: left;
+	text-align: center;
 	padding: 6px 6px 6px 12px;
 
 	/* add an image or something here ??? 
@@ -171,6 +173,7 @@ td {
 	background: #fff;
 	padding: 6px 6px 6px 12px;
 	color: #6D929B;
+	text-align:left;
 }
 
 
@@ -191,15 +194,25 @@ ul
 .mainPageList
 {
 	margin-left: 600px ;
+	width:200px;	
+	text-align:center;
 }
 .mainPageList li 
 {
-	
-	/*margin-left: 450px ;*/
-	min-width: 120px ;
-	max-width: 120px ;
+	padding:0;
 	display:block ;
 }
+.mainPageList a{
+	padding:1em; 
+	display:block;
+}
+.title {
+ 
+	margin:0 0 1em 0;
+	margin-left: 600px ;
+	 
+}
+
 li.mainPageHover:hover 
 { 
  background-color: yellow;
@@ -218,8 +231,8 @@ li {
 
 .nav li{
 	display:block;
-	min-width: 120px;
-	max-width: 120px;
+	width:120px;
+	text-align:center;
 }
 a{
 	display:block;
@@ -232,3 +245,20 @@ table.fixedWidth
 {
 	width: 400px ;
 }
+
+
+.hover td{
+	margin:0;
+	padding:0;
+	text-align:center;
+	display:block;
+}
+.hover a{
+	margin:0;
+	padding:5px;
+}
+
+.hover td:hover {
+	background-color:yellow;
+}
+ 
